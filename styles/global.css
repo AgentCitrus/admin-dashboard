@@ -1,0 +1,300 @@
+@font-face {
+    font-family: roboto;
+    src: url('../assets/fonts/Roboto-Light.ttf');
+    font-weight: light;
+}
+
+@font-face {
+    font-family: roboto;
+    src: url('../assets/fonts/Roboto-Regular.ttf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: roboto;
+    src: url('../assets/fonts/Roboto-Bold.ttf');
+    font-weight: bold;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: roboto;    
+    color: black;
+}
+
+body, body > * {
+    display: flex;
+}
+
+body > * {
+    flex-direction: column;
+}
+
+#sidebar {
+    background-color: #0ea5e9;
+    min-height: 100vh;
+    flex: 1;
+    z-index: 2;
+}
+
+#sidebar * {
+    text-decoration-line: none;
+    color: white;
+}
+
+#sidebar > * {
+    padding-top: 25px;
+    padding-left: 30px;
+}
+
+#sidebar section {
+    display: flex;
+    flex-direction: column;
+}
+
+#sidebar section a {
+    font-size: 20px;
+    transition-duration: 0.1s;
+    transition-property: text-shadow;
+    transition-timing-function: ease-in-out;
+}
+
+#sidebar section a:hover {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+#sidebar > section > section {
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#sidebar img {
+    filter: invert(100%) sepia(98%) saturate(0%) hue-rotate(338deg) brightness(102%) contrast(100%);
+}
+
+#content {
+    flex: 5;
+    background-color: rgb(225, 225, 235);
+}
+
+#content main {
+    display: grid;
+    flex: 5;
+    grid-template-columns: 2.5fr 1fr;
+    padding-bottom: 50px;
+}
+
+main > section {
+    display: flex;
+    flex-direction: column;
+}
+
+main > * {
+    padding: 0 5vh;
+}
+
+#projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 325px);
+    justify-content: space-between;
+    column-gap: 20px;
+    row-gap: 5vh;
+}
+
+#content header {
+    flex: 1;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 1px 2px 3px lightgray;
+    z-index: 1;
+}
+
+#content > * {
+    display: flex;
+}
+
+#nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.5vw;
+    flex: 2;
+}
+
+#searchInput {
+    background-color: rgb(225, 225, 235);
+    border: 0;
+    padding: 10px 15px;
+    border-radius: 20px;
+    color: black;
+    margin-left: 0.5vw;
+    width: 25vw;
+}
+
+#headerUser {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+#controls {
+    display: flex;
+    padding: 1vw;
+    flex: 3;
+    justify-content: space-around;
+}
+
+#controls > * {
+    display: flex;
+    justify-content: center;
+    gap: 1.5vw;
+    flex: 1;
+}
+
+#welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.3vh;
+}
+
+.icon {
+    width: 1.24vw;
+    height: auto;
+}
+
+.profilePictureSmall {
+    width: 2.5vw;
+    height: auto;
+    border-radius: 2.5vw;
+}
+
+.profilePictureLarge {
+    width: 4vw;
+    height: auto;
+    border-radius: 4vw;
+}
+
+button {
+    background-color: #0ea5e9;
+    color: white;
+    border: 0;
+    padding: 0.65rem 2rem;
+    font-size: large;
+    font: roboto;
+    font-weight: bold;
+    border-radius: 3rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: hsl(199, 89%, 60%);
+}
+
+button:active {
+    background-color: hsl(199, 89%, 40%);
+}
+
+.card {
+    width: 336px;
+    min-height: 185.5px;
+    background-color: white;
+    border-radius: 10px;
+    border-left: 10px solid gold;
+    box-shadow: 2px 2px 2px 1px lightgray;
+    box-sizing: border-box;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 2px 3px 3px 1px lightgray;
+}
+
+.card h1 {
+    font-size: large;
+}
+
+.card p {
+    color: gray;
+}
+
+.card :first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.card :last-child {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.scaledCard {
+    width: 336px;
+    min-height: 185.5px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 1px lightgray;
+    box-sizing: border-box;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.scaledCard:hover {
+    transform: scale(1.02);
+    box-shadow: 2px 3px 3px 1px lightgray;
+}
+
+.scaledCard > section {
+    padding: 10px 5px;
+    border-bottom: 2px solid lightgray;
+}
+
+.scaledCard :last-child {
+    border: 0;
+}
+
+#userCard > section {
+    display: flex;
+}
+
+#userCard > section > section {
+    padding-left: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#userCard h1 {
+    font-size: 14px;
+}
+
+.title {
+    padding: 25px 0 10px 0;
+    font-family: roboto;
+    font-weight: lighter;
+}
+
+.announcementText {
+    color: gray;
+    font-size: 0.8rem;
+}
+
+#logo {
+    font-size: 24px;
+}
